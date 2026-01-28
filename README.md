@@ -77,8 +77,8 @@ npm run dev
 ```
 
 Success indicators:
-"VITE v5.x.x ready in xxx ms"
-"Local: http://localhost:3000/"
+VITE v5.x.x ready in xxx ms
+Local: http://localhost:3000/
 Open browser: http://localhost:3000
 
 ### 🔌 Connecting Frontend to Backend
