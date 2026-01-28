@@ -190,3 +190,93 @@ Dashbaord
 | Method | Endpoint                 | Description                     | Auth |
 | ------ | ------------------------ | ------------------------------- | ---- |
 | GET    | `/api/dashboard/summary` | Stats, active borrow, total due | Yes  |
+
+Request/ Response Example
+
+Login Request:
+```JSON
+POST /api/auth/login
+{
+  "email": "student@example.com",
+  "password": "password123"
+}
+```
+
+Login Response
+```JSON
+{
+  "success": true,
+  "message": "Login successful",
+  "data": {
+    "token": "eyJhbGciOiJIUzI1NiIs...",
+    "user": {
+      "id": "6578a1b2c3d4e5f6g7h8i9j0",
+      "name": "John Doe",
+      "email": "student@example.com"
+    }
+  }
+}
+```
+Create Borrow Request
+```JSON
+POST /api/borrow
+{
+  "bookId": "B001",
+  "days": 7
+}
+```
+
+Borrow Response
+```JSON
+{
+  "success": true,
+  "message": "Book borrowed successfully",
+  "data": {
+    "borrowId": "6578a1b2c3d4e5f6g7h8i9j0",
+    "book": {
+      "id": "B001",
+      "title": "The Great Gatsby"
+    },
+    "borrowDate": "2024-01-28T10:00:00Z",
+    "dueDate": "2024-02-04T10:00:00Z",
+    "totalCost": 14.00,
+    "status": "Active"
+  }
+}
+```
+
+### Sample Data
+
+Test Account:
+```
+Email: test@student.com
+Password: password123
+
+```
+
+#### Books Available:
+- 20 classic books (The Great Gatsby, 1984, etc.)
+- Price range: $2-5 per day
+- Max borrow: 14 days
+- Overdue fee: $1/day
+
+### 🛠️ Technology Stack
+
+#### Backend
+
+- Node.js 18+
+- Express.js 4.x
+- MongoDB 6.x + Mongoose 8.x
+- JWT for authentication
+- bcryptjs for password hashing
+- express-validator for input validation
+
+#### Frontend
+
+- React 18
+- React Router 6
+- Axios for HTTP requests
+- date-fns for date formatting
+- react-icons for UI icons
+- react-hot-toast for notifications
+- Vite for build tooling
