@@ -2,34 +2,6 @@
 
 A full-stack web application for managing book borrowing, cost calculation, and payment tracking among students. Built with Node.js/Express backend and React frontend.
 
-## 📁 Project Structure
-
-smart-library/
-├── library-backend/          # Node.js + Express + MongoDB
-│   ├── src/
-│   │   ├── config/          # Database & constants
-│   │   ├── controllers/     # Business logic
-│   │   ├── middleware/      # Auth & validation
-│   │   ├── models/          # Mongoose schemas
-│   │   ├── routes/          # API endpoints
-│   │   ├── utils/           # Helpers (calculators, formatters)
-│   │   ├── app.js           # Express app config
-│   │   └── server.js        # Entry point
-│   ├── .env                 # Environment variables
-│   └── package.json
-│
-└── library-frontend/        # React + Vite
-├── src/
-│   ├── components/      # Reusable UI components
-│   ├── context/         # Auth context
-│   ├── pages/           # Route pages
-│   ├── services/        # API calls
-│   ├── utils/           # Formatters & validators
-│   ├── App.jsx          # Main app
-│   ├── main.jsx         # Entry point
-│   └── index.css        # Styles
-└── package.json
-
 
 ## 🚀 Prerequisites
 
