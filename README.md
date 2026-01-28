@@ -39,7 +39,7 @@ MONGODB_URL=mongodb://localhost:27017
 
 ### 4. Run Backend
 ```bash
-npm run dev
+pnpm run dev
 ```
 Success Indicators
 - "MongoDB Connected: localhost"
